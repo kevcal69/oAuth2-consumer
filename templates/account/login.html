@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% load socialaccount %}
+{% block content %}
+<h2>Consumer SSO</h2>
+<a href="{% provider_login_url 'authprovider' process='login' action='reauthenticate' %}">
+    <div class="button"><span>Login</span></div>
+</a>
+{% endblock %}
